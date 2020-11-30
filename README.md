@@ -29,7 +29,7 @@ A continuación, por medio de una serie de capturas de pantalla se detallarán l
 1. Se debe abrir el IDE de Netbeans.
 
 2. Seleccionar la opción Team/ Equipo en la barra principal. 
-![Captura de pantalla (417)](https://user-images.githubusercontent.com/28690419/86803156-f89a9700-c032-11ea-9b4a-5f505487ff96.png)
+![WhatsApp Image 2020-11-29 at 10 47 56 PM](https://user-images.githubusercontent.com/28690419/100569868-fc0a1580-3294-11eb-9910-0773577a25c4.jpeg)
 
 3. Luego de seleccionar Team/Equipo se despliegan una serie de opciones, de las cuales se elegirá Git y seguidamente Clone.
 ![Captura de pantalla (411)](https://user-images.githubusercontent.com/28690419/86814230-5a143300-c03e-11ea-8728-37b471a8f03e.png)
