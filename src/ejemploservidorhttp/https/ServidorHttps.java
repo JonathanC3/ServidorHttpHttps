@@ -8,7 +8,6 @@ import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.UnrecoverableKeyException;
-import java.security.cert.Certificate;
 import java.security.cert.CertificateException;
 
 import javax.net.ssl.KeyManagerFactory;
@@ -20,20 +19,15 @@ import javax.net.ssl.TrustManagerFactory;
 import com.sun.net.httpserver.HttpsConfigurator;
 import com.sun.net.httpserver.HttpsParameters;
 import com.sun.net.httpserver.HttpsServer;
-import java.io.File;
-import java.net.Socket;
 import javax.swing.JOptionPane;
 
 public class ServidorHttps {
-	private int port;
 	private HttpsServer server;
 	private static String protocol = "TLS";
         
 	public void Start(int port) {
 		try {
-			this.port = port;
 			// load certificate
-			
 			char[] storepass = "passhttps".toCharArray();
 			char[] keypass = "passhttps".toCharArray();
 			String alias = "self_signed";

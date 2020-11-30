@@ -21,12 +21,13 @@ import java.util.Date;
 import java.util.StringTokenizer;
 
 public class ServidorHttp implements Runnable{ 
-	static final File WEB_ROOT = new File("C:/Users/jcast/OneDrive/Documents/NetBeansProjects/Ejemplo ServidorHttp/src/pages/");
+
+	static final File WEB_ROOT = new File("C:/Users/jcast/OneDrive/Documents/NetBeansProjects/ServidorHttp/src/pages/");
         static final String DEFAULT_FILE = "index.html";
 	static final String FILE_NOT_FOUND = "404.html";
 	static final String METHOD_NOT_SUPPORTED = "not_supported.html";
 	//puerto para http
-	static final int PORT = 8080;
+	static final int PORT = 8000;
 	
 	// verbose mode
 	static final boolean verbose = true;
@@ -41,14 +42,13 @@ public class ServidorHttp implements Runnable{
 	public static void main(String[] args) {
 		try {
 			ServerSocket serverConnect = new ServerSocket(PORT);
-			System.out.println("Server started.\nListening for connections on port : " + PORT + " ...\n");
-			
+			System.out.println("Iniciando Servidor.\nEsperando conexiones en el puerto : " + PORT);
 			
 			while (true) {
 				ServidorHttp myServer = new ServidorHttp(serverConnect.accept());
 				
 				if (verbose) {
-					System.out.println("Connecton opened. (" + new Date() + ")");
+					System.out.println("Conectado el . (" + new Date() + ")");
 				}
 				
 				// se maneja cada cliente por medio de un socket
@@ -98,7 +98,7 @@ public class ServidorHttp implements Runnable{
 					
 				// we send HTTP Headers with data to client
 				out.println("HTTP/1.1 501 Not Implemented");
-				out.println("Server: Java HTTP Server from SSaurel : 1.0");
+				out.println("Servidor: Http");
 				out.println("Date: " + new Date());
 				out.println("Content-type: " + contentMimeType);
 				out.println("Content-length: " + fileLength);
@@ -123,8 +123,8 @@ public class ServidorHttp implements Runnable{
 					
 					// send HTTP Headers
 					out.println("HTTP/1.1 200 OK");
-					out.println("Server: Java HTTP Server from SSaurel : 1.0");
-					out.println("Date: " + new Date());
+					out.println("Servidor: Http");
+          out.println("Date: " + new Date());
 					out.println("Content-type: " + content);
 					out.println("Content-length: " + fileLength);
 					out.println(); // blank line between headers and content, very important !
@@ -135,7 +135,7 @@ public class ServidorHttp implements Runnable{
 				}
 				
 				if (verbose) {
-					System.out.println("File " + fileRequested + " of type " + content + " returned");
+					System.out.println("El archivo " + fileRequested + " de tipo " + content);
 				}
 				
 			}
@@ -144,11 +144,11 @@ public class ServidorHttp implements Runnable{
 			try {
 				fileNotFound(out, dataOut, fileRequested);
 			} catch (IOException ioe) {
-				System.err.println("Error with file not found exception : " + ioe.getMessage());
+				System.err.println("No encuentra el archivo : " + ioe.getMessage());
 			}
 			
 		} catch (IOException ioe) {
-			System.err.println("Server error : " + ioe);
+			System.err.println("Error de servidor : " + ioe);
 		} finally {
 			try {
 				in.close();
@@ -156,7 +156,7 @@ public class ServidorHttp implements Runnable{
 				dataOut.close();
 				connect.close(); // we close socket connection
 			} catch (Exception e) {
-				System.err.println("Error closing stream : " + e.getMessage());
+				System.err.println("Se cerró incorrectamente : " + e.getMessage());
 			} 
 			
 			if (verbose) {
