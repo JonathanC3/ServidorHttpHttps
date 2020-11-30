@@ -1,7 +1,7 @@
 # Servidor Http y Https
 Estos son los servidores tanto http como https
 
-Software de servidor elaborado por María Orocú,José Quirós, Jonathan Castro y Pablo Castillo
+Software de servidor elaborado por María Orocú, José Quirós, Jonathan Castro y Pablo Castillo
 
 En este apartado se detallará el software que se debe instalar para ejecutar este proyecto y cuales son los pasos a seguir.
 
