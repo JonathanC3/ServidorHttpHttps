@@ -36,16 +36,16 @@ A continuación, por medio de una serie de capturas de pantalla se detallarán l
 ![Captura de pantalla (411)](https://user-images.githubusercontent.com/28690419/86814230-5a143300-c03e-11ea-8728-37b471a8f03e.png)
 
 4. Se desplegará una ventana "Clone Repository" en la que se solicita el enlace del repositorio, las credenciales de la cuenta en GitHub y la ruta deseada para clonar el proyecto. Luego de esto dar click en Next. 
-![Captura de pantalla (412)](https://user-images.githubusercontent.com/28690419/86814693-ffc7a200-c03e-11ea-88be-c5fd638cbc79.png)
+![Captura de pantalla (12)](https://user-images.githubusercontent.com/28690419/100570774-265cd280-3297-11eb-84aa-bc24dc663935.png)
 
 El enlace del repositorio se puede copiar desde la sección de code como se muestra en la siguiente imagen.
-![Captura de pantalla (418)](https://user-images.githubusercontent.com/28690419/86815060-7795cc80-c03f-11ea-9315-711ce90145ad.png)
+![Captura de pantalla (11)](https://user-images.githubusercontent.com/28690419/100570692-f7466100-3296-11eb-9404-09b2886698f8.png)
 
-5. Se mostrará la siguiente ventana y es necesario seleccionar el botón de Next.
-![Captura de pantalla (413)](https://user-images.githubusercontent.com/28690419/86815636-1cb0a500-c040-11ea-917a-74a1ff948452.png)
+5. Se mostrará la siguiente ventana y es necesario seleccionar la rama que desea clonar, seguidamente selecciona el botón de Next.
+![Captura de pantalla (13)](https://user-images.githubusercontent.com/28690419/100570896-6e7bf500-3297-11eb-9543-015a715f0b89.png)
 
 6. Finalmente es necesario presionar el botón de Finish y el proyecto quedará clonado correctamente. 
-![Captura de pantalla (414)](https://user-images.githubusercontent.com/28690419/86816613-45856a00-c041-11ea-9965-86fc0c9d4436.png)
+![Captura de pantalla (14)](https://user-images.githubusercontent.com/28690419/100570942-85224c00-3297-11eb-8772-9727bbb7a83c.png)
 
 ### Tecnologías Utilizadas
 - Java
