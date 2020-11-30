@@ -21,6 +21,7 @@ import java.util.Date;
 import java.util.StringTokenizer;
 
 public class ServidorHttp implements Runnable{ 
+
 	static final File WEB_ROOT = new File("C:/Users/jcast/OneDrive/Documents/NetBeansProjects/ServidorHttp/src/pages/");
         static final String DEFAULT_FILE = "index.html";
 	static final String FILE_NOT_FOUND = "404.html";
@@ -42,7 +43,6 @@ public class ServidorHttp implements Runnable{
 		try {
 			ServerSocket serverConnect = new ServerSocket(PORT);
 			System.out.println("Iniciando Servidor.\nEsperando conexiones en el puerto : " + PORT);
-			
 			
 			while (true) {
 				ServidorHttp myServer = new ServidorHttp(serverConnect.accept());
@@ -124,7 +124,7 @@ public class ServidorHttp implements Runnable{
 					// send HTTP Headers
 					out.println("HTTP/1.1 200 OK");
 					out.println("Servidor: Http");
-                                        out.println("Date: " + new Date());
+          out.println("Date: " + new Date());
 					out.println("Content-type: " + content);
 					out.println("Content-length: " + fileLength);
 					out.println(); // blank line between headers and content, very important !
